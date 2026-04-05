@@ -234,16 +234,21 @@ h1 {
   top: calc(100% + 12px);
   right: 0;
   width: 240px;
-  background: #0f172a;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1e293b; /* Slightly lighter for better contrast */
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  z-index: 1000; /* Extremely high to ensure visibility */
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.7),
+    0 0 15px var(--primary-glow);
+  z-index: 1000;
   overflow-y: scroll;
-  max-height: 220px; /* ~5 items at 44px each */
+  min-height: 50px;
+  max-height: 220px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   animation: dropIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-menu::-webkit-scrollbar {
